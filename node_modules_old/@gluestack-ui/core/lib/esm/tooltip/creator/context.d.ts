@@ -1,0 +1,5 @@
+export declare const TooltipProvider: {
+    (props: any): React.JSX.Element;
+    displayName: string;
+}, useTooltipContext: (consumerName: string) => any;
+//# sourceMappingURL=context.d.ts.map

@@ -1,0 +1,1 @@
+{"version":3,"file":"FocusScope.jsx","sourceRoot":"","sources":["../../../../src/aria/focus/FocusScope.tsx"],"names":[],"mappings":"AAAA,OAAO,KAAoB,MAAM,OAAO,CAAC;AAsBzC;;;;;;GAMG;AACH,MAAM,UAAU,UAAU,CAAC,KAAsB;IAC/C,OAAO,CAAC,KAAK,CAAC,QAAQ,CAAC,CAAC,KAAK,CAAC,QAAQ,CAAC,EAAE,KAAK,CAAC,QAAQ,CAAC,CAAC;AAC3D,CAAC;AAED,4CAA4C;AAC5C,MAAM,CAAC,MAAM,eAAe,GAAG,GAAG,EAAE,GAAE,CAAC,CAAC"}

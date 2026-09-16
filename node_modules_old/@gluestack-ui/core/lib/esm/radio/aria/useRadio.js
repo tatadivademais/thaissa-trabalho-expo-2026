@@ -1,0 +1,32 @@
+import { mergeProps } from '@react-aria/utils';
+import { usePress } from '@gluestack-ui/utils/aria';
+import { getLabel } from '@gluestack-ui/utils/aria';
+/**
+ * Provides the behavior and accessibility implementation for an individual
+ * radio button in a radio group.
+ * @param props - Props for the radio.
+ * @param state - State for the radio group, as returned by `useRadioGroupState`.
+ * @param ref - Ref to the HTML input element.
+ */
+export function useRadio(props, state, _ref) {
+    let { value, isReadOnly, isDisabled, children } = props;
+    let hasChildren = children != null;
+    const label = getLabel(props);
+    if (!hasChildren && !label) {
+        console.warn('If you do not provide children, you must specify an aria-label for accessibility');
+    }
+    let preventChanges = isDisabled || isReadOnly;
+    preventChanges = preventChanges !== null && preventChanges !== void 0 ? preventChanges : false;
+    let checked = state.selectedValue === value;
+    let onPress = () => {
+        state.setSelectedValue(value);
+    };
+    let { pressProps } = usePress({
+        isDisabled: preventChanges,
+        onPress,
+    });
+    return {
+        inputProps: mergeProps(props, Object.assign(Object.assign({}, pressProps), { checked, 'disabled': preventChanges, value, 'aria-label': label, 'role': 'radio', 'aria-disabled': preventChanges, 'aria-checked': checked })),
+    };
+}
+//# sourceMappingURL=useRadio.js.map

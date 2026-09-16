@@ -1,0 +1,14 @@
+// @ts-nocheck
+import { useButton } from './useButton';
+import { chain, mergeProps } from '@react-aria/utils';
+export function useToggleButton(props, state) {
+    const { isSelected } = state;
+    const { isPressed, buttonProps } = useButton(Object.assign(Object.assign({}, props), { onPress: chain(state.toggle, props.onPress) }));
+    return {
+        isPressed,
+        buttonProps: mergeProps(buttonProps, {
+            'aria-selected': isSelected,
+        }),
+    };
+}
+//# sourceMappingURL=useToggleButton.js.map

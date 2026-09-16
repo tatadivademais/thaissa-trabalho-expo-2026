@@ -1,0 +1,8 @@
+import type { InputContext } from './types';
+export declare const InputProvider: {
+    (props: InputContext & {
+        children: React.ReactNode;
+    }): React.JSX.Element;
+    displayName: string;
+}, useInput: (consumerName: string) => InputContext;
+//# sourceMappingURL=InputContext.d.ts.map

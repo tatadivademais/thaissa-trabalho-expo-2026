@@ -1,0 +1,8 @@
+import type { IInputComponentType } from './types';
+export declare const createInput: <Root, Icon, Slot, Input>({ Root, Icon, Slot, Input, }: {
+    Root: React.ComponentType<Root>;
+    Icon: React.ComponentType<Icon>;
+    Slot: React.ComponentType<Slot>;
+    Input: React.ComponentType<Input>;
+}) => IInputComponentType<Root, Icon, Slot, Input>;
+//# sourceMappingURL=index.d.ts.map

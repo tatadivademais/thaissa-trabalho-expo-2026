@@ -1,0 +1,9 @@
+export declare const PopoverProvider: {
+    (props: any): React.JSX.Element;
+    displayName: string;
+}, usePopover: (consumerName: string) => any;
+export declare const PopoverContentProvider: {
+    (props: any): React.JSX.Element;
+    displayName: string;
+}, usePopoverContent: (consumerName: string) => any;
+//# sourceMappingURL=PopoverContext.d.ts.map

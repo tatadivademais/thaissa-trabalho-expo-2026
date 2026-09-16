@@ -1,0 +1,1 @@
+{"version":3,"file":"types.d.ts","sourceRoot":"","sources":["../../../../src/accordion/aria/types.ts"],"names":[],"mappings":"AAAA,MAAM,MAAM,KAAK,GAAG;IAClB,cAAc,EAAE,MAAM,EAAE,CAAC;IACzB,UAAU,EAAE,CAAC,SAAS,EAAE,MAAM,EAAE,UAAU,CAAC,EAAE,OAAO,KAAK,IAAI,CAAC;CAC/D,CAAC"}

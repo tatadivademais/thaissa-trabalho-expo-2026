@@ -1,0 +1,5 @@
+import React, { forwardRef } from 'react';
+export const AccordionIcon = (StyledAccordionIcon) => forwardRef((props, ref) => {
+    return <StyledAccordionIcon {...props} ref={ref}/>;
+});
+//# sourceMappingURL=AccordionIcon.jsx.map

@@ -1,0 +1,14 @@
+import type { IToastComponentType } from './types';
+export declare const createToastHook: (ViewComponent: any) => () => {
+    show: (props: import("./types").IToastProps) => string;
+    close: (id: string) => void;
+    closeAll: () => void;
+    isActive: (id: string) => boolean;
+};
+export declare function createToast<Root, Title, Description>({ Root, Title, Description, }: {
+    Root: React.ComponentType<Root>;
+    Title: React.ComponentType<Title>;
+    Description: React.ComponentType<Description>;
+}): IToastComponentType<Root, Title, Description>;
+export { ToastProvider } from './Toast';
+//# sourceMappingURL=index.d.ts.map

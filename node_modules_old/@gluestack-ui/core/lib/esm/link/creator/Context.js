@@ -1,0 +1,10 @@
+import { createContext, useContext } from 'react';
+export const LinkContext = createContext({
+    isHovered: false,
+    isFocused: false,
+    isPressed: false,
+    isDisabled: false,
+    isFocusVisible: false,
+});
+export const useLinkContext = () => useContext(LinkContext);
+//# sourceMappingURL=Context.js.map

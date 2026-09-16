@@ -1,0 +1,14 @@
+type Props = {
+    type: 'single' | 'multiple';
+    isCollapsible: boolean;
+    selectedValues: string[];
+    setSelectedValues: (values: string[]) => void;
+};
+export declare const useAccordion: (props: Props) => {
+    state: {
+        selectedValues: string[];
+        toggleItem: (itemValue: string, isDisabled?: boolean) => void;
+    };
+};
+export {};
+//# sourceMappingURL=useAccordion.d.ts.map

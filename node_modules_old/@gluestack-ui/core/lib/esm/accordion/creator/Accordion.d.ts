@@ -1,0 +1,4 @@
+import React from 'react';
+import type { IAccordionProps } from './types';
+export declare const Accordion: (StyledAccordion: any) => React.ForwardRefExoticComponent<IAccordionProps & React.RefAttributes<unknown>>;
+//# sourceMappingURL=Accordion.d.ts.map

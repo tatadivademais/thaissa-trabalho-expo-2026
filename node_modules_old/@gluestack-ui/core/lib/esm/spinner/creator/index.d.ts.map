@@ -1,0 +1,1 @@
+{"version":3,"file":"index.d.ts","sourceRoot":"","sources":["../../../../src/spinner/creator/index.tsx"],"names":[],"mappings":"AAAA,OAAO,KAAK,EACV,yBAAyB,EACzB,eAAe,EACf,aAAa,EACd,MAAM,OAAO,CAAC;AAEf,wBAAgB,aAAa,CAAC,YAAY,EAAE,EAC1C,IAAI,GACL,EAAE;IACD,IAAI,EAAE,KAAK,CAAC,aAAa,CAAC,YAAY,CAAC,CAAC;CACzC,GAOgB,yBAAyB,CACtC,eAAe,CAAC,YAAY,CAAC,GAAG,aAAa,CAAC,YAAY,CAAC,CAC5D,CACF"}

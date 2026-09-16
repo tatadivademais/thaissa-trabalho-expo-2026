@@ -1,0 +1,5 @@
+export declare const ProgressProvider: {
+    (props: any): React.JSX.Element;
+    displayName: string;
+}, useProgress: (consumerName: string) => any;
+//# sourceMappingURL=ProgressContext.d.ts.map

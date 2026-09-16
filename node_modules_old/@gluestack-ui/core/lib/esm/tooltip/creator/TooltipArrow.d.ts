@@ -1,0 +1,5 @@
+import React from 'react';
+export declare function TooltipArrow<StyledTooltipArrowProps>(StyledTooltipArrow: React.ComponentType<StyledTooltipArrowProps>): React.ForwardRefExoticComponent<{
+    children?: any;
+} & React.RefAttributes<unknown>>;
+//# sourceMappingURL=TooltipArrow.d.ts.map

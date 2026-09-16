@@ -1,0 +1,1 @@
+{"version":3,"file":"useAccordionItem.d.ts","sourceRoot":"","sources":["../../../../src/accordion/aria/useAccordionItem.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,KAAK,EAAE,MAAM,SAAS,CAAC;AAEhC,KAAK,KAAK,GAAG;IACX,KAAK,EAAE,MAAM,CAAC;IACd,UAAU,EAAE,OAAO,CAAC;IACpB,UAAU,EAAE,OAAO,CAAC;CACrB,CAAC;AAEF,eAAO,MAAM,gBAAgB,GAAI,OAAO,KAAK,EAAE,OAAO,KAAK;;;;;;;;;;;;;;;CA4B1D,CAAC"}

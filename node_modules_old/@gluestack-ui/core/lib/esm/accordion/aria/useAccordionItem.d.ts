@@ -1,0 +1,24 @@
+import { State } from './types';
+type Props = {
+    value: string;
+    isExpanded: boolean;
+    isDisabled: boolean;
+};
+export declare const useAccordionItem: (state: State, props: Props) => {
+    regionProps: {
+        id: string;
+        'aria-labelledby': string;
+        role: string;
+    };
+    buttonProps: {
+        id: string;
+        'aria-controls': string;
+        'aria-disabled': boolean;
+        'aria-expanded': boolean;
+        onPress: () => void;
+        role: string;
+    };
+    isExpanded: boolean;
+};
+export {};
+//# sourceMappingURL=useAccordionItem.d.ts.map

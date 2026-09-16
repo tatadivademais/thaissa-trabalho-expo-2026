@@ -1,0 +1,7 @@
+declare function Separator(_props: any): any;
+declare namespace Separator {
+    var getCollectionNode: (props: any, _context: any) => Generator<any>;
+    var displayName: string;
+}
+export { Separator };
+//# sourceMappingURL=Separator.d.ts.map

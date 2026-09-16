@@ -1,0 +1,61 @@
+var __rest = (this && this.__rest) || function (s, e) {
+    var t = {};
+    for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p) && e.indexOf(p) < 0)
+        t[p] = s[p];
+    if (s != null && typeof Object.getOwnPropertySymbols === "function")
+        for (var i = 0, p = Object.getOwnPropertySymbols(s); i < p.length; i++) {
+            if (e.indexOf(p[i]) < 0 && Object.prototype.propertyIsEnumerable.call(s, p[i]))
+                t[p[i]] = s[p[i]];
+        }
+    return t;
+};
+import React, { forwardRef, useContext } from 'react';
+import { AccordionItemContext } from './Context';
+import { useHover, usePress } from '@gluestack-ui/utils/aria';
+import { useFocusRing, useFocus } from '@gluestack-ui/utils/aria';
+import { composeEventHandlers } from '@gluestack-ui/utils/common';
+import { Platform } from 'react-native';
+export const AccordionTrigger = (StyledAccordionTrigger) => forwardRef((_a, ref) => {
+    var { children, isHovered: isHoveredProp, isFocused: isFocusedProp, isPressed: isPressedProp, isFocusVisible: isFocusVisibleProp } = _a, props = __rest(_a, ["children", "isHovered", "isFocused", "isPressed", "isFocusVisible"]);
+    const { titleText } = useContext(AccordionItemContext);
+    const { isDisabled, buttonProps, isExpanded } = useContext(AccordionItemContext);
+    const { pressProps, isPressed } = usePress({
+        isDisabled: isDisabled,
+    });
+    const { isHovered, hoverProps } = useHover();
+    const { isFocusVisible, focusProps: focusRingProps } = useFocusRing();
+    const { isFocused, focusProps } = useFocus();
+    return (<StyledAccordionTrigger accessible={true} aria-label={Platform.OS === 'android' ? titleText : undefined} ref={ref} {...props} {...buttonProps} states={{
+            disabled: isDisabled,
+            hover: isHoveredProp || isHovered,
+            focus: isFocusedProp || isFocused,
+            focusVisible: isFocusVisibleProp || isFocusVisible,
+            active: isPressedProp || isPressed,
+        }} 
+    // data attributes for uniwind
+    data-hover={isHoveredProp || isHovered ? 'true' : 'false'} data-focus={isFocusedProp || isFocused ? 'true' : 'false'} data-active={isPressedProp || isPressed ? 'true' : 'false'} data-focus-visible={isFocusVisibleProp || isFocusVisible ? 'true' : 'false'} data-disabled={isDisabled ? 'true' : 'false'} 
+    // data attributes for nativewind
+    dataSet={{
+            disabled: isDisabled ? 'true' : 'false',
+            hover: isHoveredProp || isHovered ? 'true' : 'false',
+            focus: isFocusedProp || isFocused ? 'true' : 'false',
+            focusVisible: isFocusVisibleProp || isFocusVisible ? 'true' : 'false',
+            active: isPressedProp || isPressed ? 'true' : 'false',
+        }} disabled={isDisabled} onPressIn={composeEventHandlers(props === null || props === void 0 ? void 0 : props.onPressIn, pressProps.onPressIn)} onPressOut={composeEventHandlers(props === null || props === void 0 ? void 0 : props.onPressOut, pressProps.onPressOut)} onPress={composeEventHandlers(props === null || props === void 0 ? void 0 : props.onPress, buttonProps.onPress)} 
+    // @ts-ignore - web only
+    onHoverIn={composeEventHandlers(props === null || props === void 0 ? void 0 : props.onHoverIn, hoverProps.onHoverIn)} 
+    // @ts-ignore - web only
+    onHoverOut={composeEventHandlers(props === null || props === void 0 ? void 0 : props.onHoverOut, hoverProps.onHoverOut)} onFocus={composeEventHandlers(composeEventHandlers(props === null || props === void 0 ? void 0 : props.onFocus, focusProps.onFocus), focusRingProps.onFocus)} onBlur={composeEventHandlers(composeEventHandlers(props === null || props === void 0 ? void 0 : props.onBlur, focusProps.onBlur), focusRingProps.onBlur)}>
+          {typeof children === 'function'
+            ? children({
+                hovered: isHovered,
+                focused: isFocused,
+                pressed: isPressed,
+                disabled: isDisabled,
+                focusVisible: isFocusVisible,
+                isExpanded: isExpanded,
+            })
+            : children}
+        </StyledAccordionTrigger>);
+});
+//# sourceMappingURL=AccordionTrigger.jsx.map

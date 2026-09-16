@@ -1,0 +1,14 @@
+import React from 'react';
+/**
+ * A FocusScope manages focus for its descendants. It supports containing focus inside
+ * the scope, restoring focus to the previously focused element on unmount, and auto
+ * focusing children on mount. It also acts as a container for a programmatic focus
+ * management interface that can be used to move focus forward and back in response
+ * to user events.
+ */
+export function FocusScope(props) {
+    return <React.Fragment>{props.children}</React.Fragment>;
+}
+// Noop - Implement this for mac and windows
+export const useFocusManager = () => { };
+//# sourceMappingURL=FocusScope.jsx.map

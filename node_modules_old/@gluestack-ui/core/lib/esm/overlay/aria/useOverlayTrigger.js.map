@@ -1,0 +1,1 @@
+{"version":3,"file":"useOverlayTrigger.js","sourceRoot":"","sources":["../../../../src/overlay/aria/useOverlayTrigger.ts"],"names":[],"mappings":"AAAA;;;;;;;;;;GAUG;AAkBH;;;GAGG;AACH,MAAM,UAAU,iBAAiB,CAC/B,MAA2B,EAC3B,KAA0B,EAC1B,IAA4B;IAE5B,OAAO;QACL,YAAY,EAAE;YACZ,eAAe,EAAE,KAAK,CAAC,MAAM;SAC9B;QACD,YAAY,EAAE,EAAE;KACjB,CAAC;AACJ,CAAC"}
