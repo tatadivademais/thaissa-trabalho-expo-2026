@@ -1,14 +1,17 @@
 import { StyleSheet, View, Text } from 'react-native';
 import { Button, ButtonText } from "@/components/ui/button"
 import { Divider } from '@/components/ui/divider';
-import {useRouter} from "expo-router"
+import { Link } from 'expo-router';
 
-export default function pagina1() {
-  const router = useRouter(); 
+export default function App() {
   return (
-     <View style={styles.container}>
-        <Text className='uppercase font-extrabold'> Página Três</Text>
+
+    
+      <View style={styles.container}>
+        <Text className='uppercase font-extrabold'> Página home </Text>
       </View>
+    
+
   );
 }
 
