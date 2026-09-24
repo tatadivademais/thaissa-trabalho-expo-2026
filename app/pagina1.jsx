@@ -6,14 +6,9 @@ import {useRouter} from "expo-router"
 export default function pagina1() {
   const router = useRouter(); 
   return (
-
-   
-      <View style={styles.container}>
+     <View style={styles.container}>
         <Text className='uppercase font-extrabold'> Página Um</Text>
-        
       </View>
-   
-
   );
 }
 

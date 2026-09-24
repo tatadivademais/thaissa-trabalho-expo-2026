@@ -8,7 +8,7 @@ export default function App() {
 
     <GluestackUIProvider mode="dark">
       <View style={styles.container}>
-        <Text className='uppercase font-extrabold'> Página home </Text>
+        <Text className='uppercase font-extrabold'> Página três </Text>
          <Divider className="my-3 w-52" />
         <Button className="bg-pink-300">
           <ButtonText className= 'font-bold text-white'>Primeira Página</ButtonText>
