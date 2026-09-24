@@ -1,21 +1,20 @@
 import { StyleSheet, View, Text } from 'react-native';
-import { GluestackUIProvider } from '@/components/ui/gluestack-ui-provider';
-import '@/global.css';
 import { Button, ButtonText } from "@/components/ui/button"
 import { Divider } from '@/components/ui/divider';
-import { link } from 'expo-router'
+import { Link } from 'expo-router';
+
 export default function App() {
   return (
 
-    <GluestackUIProvider mode="dark">
+    
       <View style={styles.container}>
         <Text className='uppercase font-extrabold'> Página home </Text>
          <Divider className="my-3 w-52" />
-        < link href='/pagina1' asChild>
+        < Link href="/pagina1" asChild>
         <Button className="bg-pink-300">
           <ButtonText className= 'font-bold text-white'>Primeira Página</ButtonText>
         </Button>
-        </link>
+        </Link>
        <Divider className="my-3 w-20" />
            <Button className="bg-fuchsia-300">
           <ButtonText className= 'font-bold text-white'>Segunda Página</ButtonText>
@@ -25,9 +24,8 @@ export default function App() {
           <ButtonText className= 'font-bold text-white'>Terceira Página</ButtonText>
         </Button>
            <Divider className="my-3 w-52" />
-           <Divider className="my-3 w-52" />
       </View>
-    </GluestackUIProvider>
+    
 
   );
 }
