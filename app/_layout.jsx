@@ -1,36 +1,72 @@
-import { StyleSheet, View, Text } from 'react-native';
 import { GluestackUIProvider } from '@/components/ui/gluestack-ui-provider';
 import '@/global.css';
-import { Button, ButtonText } from "@/components/ui/button"
-import { Divider } from '@/components/ui/divider';
-import { Link, Stack, Tabs} from 'expo-router';
-import Ionicons, { } from "@expo/vector-icons/Ionicons"
+import { Tabs } from 'expo-router';
+import Ionicons from '@expo/vector-icons/Ionicons';
 
 export default function App() {
   return (
-
     <GluestackUIProvider mode="dark">
-   <Tabs initialRouteName='Pagina1' screenOptions={{headerShown: false}}>
-    
-  <Tabs.Screen name='Pagina1' options={{title: "Home", tabBarIcon: (color, size)=> (
-<Ionicons name="home-outline" size={size} color={color} />
-  )}}/>
-  <Tabs.Screen name='Pagina2'/>
-  <Tabs.Screen name='Pagina3'/>
-   <Tabs.Screen name='index' options={{href: null}}/>
-  
-  
-   </Tabs>
+      <Tabs
+        initialRouteName="pagina1"
+        screenOptions={{
+          headerShown: false,
+          tabBarActiveTintColor: '#E8C96A',     
+          tabBarInactiveTintColor: '#7890B8',  
+          tabBarStyle: {
+            backgroundColor: '#06152F',         
+            borderTopColor: '#1C3761',         
+            height: 60,
+            paddingBottom: 8,
+            paddingTop: 8,
+          },
+        }}
+      >
+        <Tabs.Screen
+          name="pagina1"
+          options={{
+            title: 'Personagens',
+            tabBarIcon: ({ color, size }) => (
+              <Ionicons
+                 name="person-outline"
+                size={size}
+                color={color}
+              />
+            ),
+          }}
+        />
+<Tabs.Screen
+        name="pagina2"
+        options={{
+          title: 'Filmes',
+          tabBarIcon: ({ color, size }) => (
+            <Ionicons name="videocam-outline" size={size} color={color} />
+          ),
+        }}
+      />
+            
 
+        <Tabs.Screen
+          name="pagina3"
+          options={{
+            title: 'Casas',
+            tabBarIcon: ({ color, size }) => (
+              <Ionicons
+                name="home-outline"
+                size={size}
+                color={color}
+              />
+            ),
+          }}
+        />
+
+        {/* Esconde a rota index padrão do Expo Router da barra de abas */}
+        <Tabs.Screen
+          name="index"
+          options={{
+            href: null,
+          }}
+        />
+      </Tabs>
     </GluestackUIProvider>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});

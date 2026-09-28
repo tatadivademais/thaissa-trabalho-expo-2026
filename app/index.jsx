@@ -1,17 +1,14 @@
 import { StyleSheet, View, Text } from 'react-native';
-import { Button, ButtonText } from "@/components/ui/button"
+import { Button, ButtonText } from '@/components/ui/button';
 import { Divider } from '@/components/ui/divider';
 import { Link } from 'expo-router';
 
 export default function App() {
   return (
 
-    
       <View style={styles.container}>
-        <Text className='uppercase font-extrabold'> Página home </Text>
+        <Text className="uppercase font-extrabold">   Página Home</Text>
       </View>
-    
-
   );
 }
 
